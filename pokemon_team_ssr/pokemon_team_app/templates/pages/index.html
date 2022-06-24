@@ -5,9 +5,12 @@
   <title></title>
 </head>
 <body>
-  {% if name %}
-  <p> TEAM TYPE: {{ name }}</p>
-  <img src={{ image_url }}>
+  {% if base_poke %}
+  <p> TEAM TYPE: {{ base_poke.base_poke_type }}</p>
+  <img width="270" src="{{base_poke.base_poke_image_url}}" />
+  {% for poke in support_poke %}
+  <img src={{ poke.image_url }} />
+  {% endfor %}
   {% else %}
     <p>There is no pokemon</p>
   {% endif %}
