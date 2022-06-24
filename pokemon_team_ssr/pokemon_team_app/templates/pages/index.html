@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  {% if name %}
+  <p> TEAM TYPE: {{ name }}</p>
+  <img src={{ image_url }}>
+  {% else %}
+    <p>There is no pokemon</p>
+  {% endif %}
+</body>
+</html>
